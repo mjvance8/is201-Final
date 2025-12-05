@@ -1,1 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Riddle Generator App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #111827;
+      background: #0f172a;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .app-container {
+      background: #f9fafb;
+      border-radius: 16px;
+      padding: 2rem 1.75rem;
+      width: min(420px, 92vw);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.35);
+      border: 1px solid #e5e7eb;
+    }
+
+    h1 {
+      margin-top: 0;
+      text-align: center;
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-bottom: 1.25rem;
+    }
+
+    .category-select {
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+
+    select {
+      padding: 0.35rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      background: #ffffff;
+    }
+
+    button {
+      border: none;
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: linear-gradient(135deg, #2563eb, #22c55e);
+      color: white;
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.4);
+      transition: transform 0.09s ease, box-shadow 0.09s ease, filter 0.15s ease;
+    }
+
+    button:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.5);
+    }
+
+    button:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.4);
+    }
+
+    .card {
+      margin-top: 1.2rem;
+      padding: 1rem 0.9rem;
+      border-radius: 12px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      min-height: 80px;
+    }
+
+    .prompt-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6b7280;
+      margin-bottom: 0.25rem;
+    }
+
+    .riddle-text {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .answer-card {
+      margin-top: 0.6rem;
+      padding: 0.75rem 0.75rem;
+      border-radius: 10px;
+      background: #ecfdf5;
+      border: 1px dashed #34d399;
+      display: none;
+    }
+
+    .answer-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #047857;
+      margin-bottom: 0.15rem;
+    }
+
+    .answer-text {
+      margin: 0;
+      font-weight: 600;
+      color: #064e3b;
+    }
+
+    .footer-links {
+      margin-top: 1.2rem;
+      font-size: 0.8rem;
+      text-align: center;
+      color: #6b7280;
+    }
+
+    .footer-links a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <h1>Riddle Generator</h1>
+    <p class="subtitle">
+      Pick a category, get a riddle. Click “Show Answer” when you’re ready.
+    </p>
+
+    <div class="category-select">
+      <label for="category">Category:</label>
+      <select id="category">
+        <option value="random">Random</option>
+        <option value="logic">Logic</option>
+        <option value="wordplay">Wordplay</option>
+        <option value="kids">Easy / Kids</option>
+      </select>
+      <button id="newRiddleBtn">New Riddle</button>
+    </div>
+
+    <div class="card">
+      <div class="prompt-label">RIDDLE</div>
+      <p id="riddleText" class="riddle-text">
+        Click “New Riddle” to get started.
+      </p>
+    </div>
+
+    <div class="answer-card" id="answerCard">
+      <div class="answer-label">ANSWER</div>
+      <p id="answerText" class="answer-text"></p>
+    </div>
+
+    <div style="margin-top: 0.8rem; text-align:center;">
+      <button id="showAnswerBtn">Show Answer</button>
+    </div>
+
+    <div class="footer-links">
+      <p>
+        <a href="scratch.html">← Back to Scratch Page</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const riddles = {
+      logic: [
+        {
+          question:
+            "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?",
+          answer: "An echo."
+        },
+        {
+          question: "What gets wetter the more it dries?",
+          answer: "A towel."
+        },
+        {
+          question:
+            "You see me once in June, twice in November, but not at all in May. What am I?",
+          answer: "The letter 'e'."
+        }
+      ],
+      wordplay: [
+        {
+          question: "What has many keys but can’t open a single lock?",
+          answer: "A piano."
+        },
+        {
+          question: "Why can’t a nose be 12 inches long?",
+          answer: "Because then it would be a foot."
+        },
+        {
+          question: "What word becomes shorter when you add two letters to it?",
+          answer: "The word 'short'."
+        }
+      ],
+      kids: [
+        {
+          question: "What has a face and two hands, but no arms or legs?",
+          answer: "A clock."
+        },
+        {
+          question: "I’m full of holes but I still hold water. What am I?",
+          answer: "A sponge."
+        },
+        {
+          question: "What can you catch but not throw?",
+          answer: "A cold."
+        }
+      ]
+    };
+
+    function getAllRiddles() {
+      return [...riddles.logic, ...riddles.wordplay, ...riddles.kids];
+    }
+
+    const categorySelect = document.getElementById("category");
+    const newRiddleBtn = document.getElementById("newRiddleBtn");
+    const showAnswerBtn = document.getElementById("showAnswerBtn");
+    const riddleText = document.getElementById("riddleText");
+    const answerText = document.getElementById("answerText");
+    const answerCard = document.getElementById("answerCard");
+
+    let currentAnswer = "";
+
+    function pickRiddle() {
+      const category = categorySelect.value;
+      let pool;
+
+      if (category === "random") {
+        pool = getAllRiddles();
+      } else {
+        pool = riddles[category] || getAllRiddles();
+      }
+
+      const randomIndex = Math.floor(Math.random() * pool.length);
+      const r = pool[randomIndex];
+
+      riddleText.textContent = r.question;
+      currentAnswer = r.answer;
+      answerText.textContent = "";
+      answerCard.style.display = "none";
+    }
+
+    newRiddleBtn.addEventListener("click", pickRiddle);
+
+    showAnswerBtn.addEventListener("click", () => {
+      if (!currentAnswer) return;
+      answerText.textContent = currentAnswer;
+      answerCard.style.display = "block";
+    });
+  </script>
+</body>
+</html>
 
