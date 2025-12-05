@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Scratch Page – Adventure & Web Experiments</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/scratch.css" />
+</head>
+<body id="top">
+  <!-- Page Wrapper (div #1) -->
+  <div class="page-wrapper">
+    <!-- Header (div #2 in spirit) -->
+    <header class="site-header">
+      <h1>Adventure Scratch Page</h1>
+      <p class="tagline">
+        A playground for HTML, CSS, Tableau, and a tiny web app.
+      </p>
+      <nav class="top-nav">
+        <a href="index.html">← Back to Professional Site</a>
+        <a href="#lists">Fun Lists</a>
+        <a href="#video">Favorite Video</a>
+        <a href="#tableau">Tableau Viz</a>
+        <a href="app.html">Mini Web App</a>
+      </nav>
+    </header>
+
+    <!-- Main Content (div #3) -->
+    <main class="content">
+      <!-- Intro section -->
+      <section class="intro-box">
+        <h2>Why I Love Adventure</h2>
+        <p>
+          I’m happiest when I’m <span class="highlight">outside</span>:
+          skiing, hiking, and finding new places to explore with family and friends.
+          This page is just a sandbox to practice web dev concepts.
+        </p>
+
+        <!-- Image (not from Bootstrap theme) -->
+        <figure class="image-card">
+          <img
+            src="https://images.pexels.com/photos/196464/pexels-photo-196464.jpeg"
+            alt="Mountain landscape and hiking trail"
+          />
+          <figcaption>Imagining future adventures in the mountains.</figcaption>
+        </figure>
+      </section>
+
+      <!-- Nested lists -->
+      <section id="lists" class="lists-section">
+        <h2>Adventure Checklist</h2>
+        <p>Here’s a sample list with an unordered list inside an ordered list.</p>
+
+        <ol>
+          <li>
+            Winter Adventures
+            <ul>
+              <li>Ski a new resort</li>
+              <li>Night skiing with friends</li>
+              <li>Build a ridiculous snow fort</li>
+            </ul>
+          </li>
+          <li>
+            Summer Adventures
+            <ul>
+              <li>Backpacking trip</li>
+              <li>Lake day with paddleboards</li>
+              <li>Sunset hike + campfire</li>
+            </ul>
+          </li>
+          <li>
+            Bucket List Trips
+            <ul>
+              <li>Alps ski tour</li>
+              <li>Scuba diving somewhere tropical</li>
+              <li>National parks road trip with my future family</li>
+            </ul>
+          </li>
+        </ol>
+
+        <!-- On-page anchor example -->
+        <p class="back-to-top">
+          <a href="#top">Back to top of page ↑</a>
+        </p>
+      </section>
+
+      <!-- Embedded YouTube video -->
+      <section id="video" class="video-section">
+        <h2>Adventure Inspiration Video</h2>
+        <p>
+          Replace this with any YouTube video you like later by swapping the
+          <code>src</code> URL.
+        </p>
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- Tableau section -->
+      <section id="tableau" class="tableau-section">
+        <h2>Interactive Tableau Graph</h2>
+        <p>
+          This is a live Tableau Public visualization. You can replace it with one of your own,
+          but this example meets the requirement for an interactive embedded Tableau graph.
+        </p>
+
+        <div class="tableau-wrapper">
+          <iframe
+            src="https://public.tableau.com/views/RegionalSampleWorkbook/Storms"
+            width="100%"
+            height="500"
+            frameborder="0"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>
+        This scratch page is for my IS 201 final web development project.
+        <a href="app.html">Check out the small web app →</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
 
