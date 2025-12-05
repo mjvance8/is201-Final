@@ -1,1 +1,155 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f0f4f8; /* custom background color */
+  color: #1f2933;      /* font color */
+}
+
+.page-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Header */
+.site-header {
+  text-align: center;
+  padding: 1rem 0 1.5rem;
+  border-bottom: 2px solid #d0d7e2;
+}
+
+.site-header h1 {
+  margin-bottom: 0.25rem;
+  font-size: 2rem;
+}
+
+.tagline {
+  margin: 0;
+  color: #52606d;
+}
+
+/* Simple nav */
+.top-nav {
+  margin-top: 0.75rem;
+}
+
+.top-nav a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #0b7285;
+  font-weight: 500;
+}
+
+.top-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
+.content {
+  margin-top: 1.5rem;
+}
+
+/* Intro box */
+.intro-box {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: #d97706; /* warm accent */
+  font-weight: 600;
+}
+
+/* Image card */
+.image-card {
+  margin: 1rem 0 0;
+  text-align: center;
+}
+
+.image-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+}
+
+.image-card figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Lists section */
+.lists-section {
+  background: #e5efff;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.lists-section ol {
+  padding-left: 1.5rem;
+}
+
+.lists-section ul {
+  padding-left: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.back-to-top {
+  margin-top: 1rem;
+}
+
+.back-to-top a {
+  color: #0b7285;
+}
+
+/* Video section */
+.video-section {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive video embed */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.2);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Tableau section */
+.tableau-section {
+  background: #fdfdfd;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.tableau-wrapper iframe {
+  border-radius: 8px;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1rem 0 0.5rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
 
