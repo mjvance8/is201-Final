@@ -1,1 +1,13 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Optional subtle tweaks */
+header {
+  background: #f8fafc;
+}
+
+h1, h2, h3 {
+  color: #111827;
+}
 
