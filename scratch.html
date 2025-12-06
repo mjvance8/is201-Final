@@ -2,132 +2,167 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Scratch Page – Adventure & Web Experiments</title>
+  <title>Scratch Page – Skiing at Grand Targhee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Custom scratch stylesheet -->
   <link rel="stylesheet" href="css/scratch.css" />
 </head>
+
 <body id="top">
-  <!-- Page Wrapper (div #1) -->
+
   <div class="page-wrapper">
-    <!-- Header (div #2 in spirit) -->
+
+    <!-- Header -->
     <header class="site-header">
-      <h1>Adventure Scratch Page</h1>
-      <p class="tagline">
-        A playground for HTML, CSS, Tableau, and a tiny web app.
-      </p>
+      <h1>Why I Love Skiing</h1>
+      <p class="tagline">A simple page about something I actually care about.</p>
+
       <nav class="top-nav">
         <a href="index.html">← Back to Professional Site</a>
-        <a href="#lists">Fun Lists</a>
-        <a href="#video">Favorite Video</a>
-        <a href="#tableau">Tableau Viz</a>
-        <a href="app.html">Mini Web App</a>
+        <a href="#lists">Ski Goals</a>
+        <a href="#video">Ski Video</a>
+        <a href="#myclip">My Misty Flip</a>
+        <a href="#tableau">Tableau Graph</a>
+        <a href="app.html">My Web App</a>
       </nav>
     </header>
 
-    <!-- Main Content (div #3) -->
+    <!-- Main content -->
     <main class="content">
+
       <!-- Intro section -->
       <section class="intro-box">
-        <h2>Why I Love Adventure</h2>
+        <h2>Skiing at Grand Targhee</h2>
         <p>
-          I’m happiest when I’m <span class="highlight">outside</span>:
-          skiing, hiking, and finding new places to explore with family and friends.
-          This page is just a sandbox to practice web dev concepts.
+          My favorite ski resort is the resort I grew up skiing at: Grand Targhee.
+          It consistently has fantastic snow, great access to backcountry terrain, and it’s
+          small enough that even though it’s on the other side of Jackson, the lift lines
+          usually aren’t terrible. Some of my favorite memories are from when I was
+          basically two years old and up, skiing there with my family. There’s something
+          special about riding the same lifts and runs year after year and having all
+          those shared stories on the mountain.
+        </p>
+        <p>
+          This page is just a place to talk about that and, at the same time, show that I
+          can actually write HTML and CSS from scratch for this class.
         </p>
 
         <!-- Image (not from Bootstrap theme) -->
         <figure class="image-card">
-          <img
-            src="https://images.pexels.com/photos/196464/pexels-photo-196464.jpeg"
-            alt="Mountain landscape and hiking trail"
+          <img 
+            src="https://images.pexels.com/photos/848573/pexels-photo-848573.jpeg"
+            alt="Person skiing down a snowy mountain"
           />
-          <figcaption>Imagining future adventures in the mountains.</figcaption>
+          <figcaption>My ideal kind of day: soft snow, good visibility, and fast laps.</figcaption>
         </figure>
       </section>
 
-      <!-- Nested lists -->
+      <!-- Ordered list with unordered lists inside -->
       <section id="lists" class="lists-section">
-        <h2>Adventure Checklist</h2>
-        <p>Here’s a sample list with an unordered list inside an ordered list.</p>
+        <h2>My Skiing Bucket List</h2>
+        <p>
+          This is an ordered list with unordered lists inside it. These are some of the
+          things I want to do on skis, from small improvements to big trips.
+        </p>
 
         <ol>
           <li>
-            Winter Adventures
+            Improve My Technique
             <ul>
-              <li>Ski a new resort</li>
-              <li>Night skiing with friends</li>
-              <li>Build a ridiculous snow fort</li>
+              <li>Stronger carving on steeper runs</li>
+              <li>Get more comfortable skiing switch</li>
+              <li>Be consistent and in control on small jumps</li>
             </ul>
           </li>
+
           <li>
-            Summer Adventures
+            Places I Want to Ski Someday
             <ul>
-              <li>Backpacking trip</li>
-              <li>Lake day with paddleboards</li>
-              <li>Sunset hike + campfire</li>
+              <li>Whistler Blackcomb</li>
+              <li>Jackson Hole (on a deep powder day)</li>
+              <li>The Alps, somewhere with big terrain and long runs</li>
             </ul>
           </li>
+
           <li>
-            Bucket List Trips
+            Just-for-Fun Goals
             <ul>
-              <li>Alps ski tour</li>
-              <li>Scuba diving somewhere tropical</li>
-              <li>National parks road trip with my future family</li>
+              <li>Ski 30+ days in one season</li>
+              <li>Night ski during a heavy snowfall</li>
+              <li>Go back to Grand Targhee with my own family someday</li>
             </ul>
           </li>
         </ol>
 
-        <!-- On-page anchor example -->
-        <p class="back-to-top">
-          <a href="#top">Back to top of page ↑</a>
-        </p>
+        <!-- On-page anchor -->
+        <p class="back-to-top"><a href="#top">Back to top ↑</a></p>
       </section>
 
-      <!-- Embedded YouTube video -->
+      <!-- YouTube skiing video -->
       <section id="video" class="video-section">
-        <h2>Adventure Inspiration Video</h2>
+        <h2>Skiing Video</h2>
         <p>
-          Replace this with any YouTube video you like later by swapping the
-          <code>src</code> URL.
+          This is a ski video that matches the feeling I love about being on the mountain.
+          It’s here mainly to show that I know how to embed a YouTube video.
         </p>
+
         <div class="video-wrapper">
-          <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="YouTube video player"
+          <iframe 
+            src="https://www.youtube.com/embed/fbqHK8i-HdA"
+            title="Skiing Video"
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
         </div>
       </section>
 
-      <!-- Tableau section -->
-      <section id="tableau" class="tableau-section">
-        <h2>Interactive Tableau Graph</h2>
+      <!-- Your own misty flip clip -->
+      <section id="myclip" class="video-section">
+        <h2>My Skiing Clip</h2>
         <p>
-          This is a live Tableau Public visualization. You can replace it with one of your own,
-          but this example meets the requirement for an interactive embedded Tableau graph.
+          I love skiing. This is a short clip of me doing a misty flip.
+        </p>
+
+        <!-- IMPORTANT: make sure this path matches where you put Misty.mp4 in your repo -->
+        <video controls style="width: 100%; max-width: 100%; border-radius: 8px;">
+          <source src="video/Misty.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <!-- Tableau visualization -->
+      <section id="tableau" class="tableau-section">
+        <h2>Snow & Weather Tableau Graph</h2>
+        <p>
+          This Tableau embed is here to meet the assignment requirement for a live,
+          interactive Tableau visualization. It doesn’t have to be one I created;
+          I just need a working, interactive graph.
         </p>
 
         <div class="tableau-wrapper">
+          <!-- You can replace this iframe with your own Tableau Public embed later if you want -->
           <iframe
             src="https://public.tableau.com/views/RegionalSampleWorkbook/Storms"
             width="100%"
             height="500"
-            frameborder="0"
-          ></iframe>
+            frameborder="0">
+          </iframe>
         </div>
       </section>
+
     </main>
 
     <!-- Footer -->
     <footer class="site-footer">
       <p>
-        This scratch page is for my IS 201 final web development project.
-        <a href="app.html">Check out the small web app →</a>
+        This is my from-scratch page for IS 201.
+        <a href="app.html">Click here to see my web app →</a>
       </p>
     </footer>
+
   </div>
+
 </body>
 </html>
 
